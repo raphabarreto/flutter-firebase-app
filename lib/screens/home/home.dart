@@ -1,11 +1,10 @@
 import 'package:brew_crew/models/brew.dart';
+import 'package:brew_crew/screens/home/brew_list.dart';
 import 'package:brew_crew/screens/home/settings_form.dart';
 import 'package:brew_crew/services/auth.dart';
-import 'package:flutter/material.dart';
-
 import 'package:brew_crew/services/database.dart';
+import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:brew_crew/screens/home/brew_list.dart';
 
 class Home extends StatelessWidget {
   final AuthService _auth = AuthService();
@@ -26,7 +25,7 @@ class Home extends StatelessWidget {
     return StreamProvider<List<Brew>>.value(
       value: DatabaseService().brews,
       child: Scaffold(
-        backgroundColor: Colors.brown[100],
+        backgroundColor: Colors.brown[50],
         appBar: AppBar(
           title: Text('Brew Crew'),
           backgroundColor: Colors.brown[400],
